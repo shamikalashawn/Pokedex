@@ -9,9 +9,9 @@
     $(document).ready(function () {
       for (var i = 1; i < 152; i++) {
         //put the images of the pokemon on the page
-        var pokemon = "http://pokeapi.co/media/img/" + i + ".png";
+        var pokemon = "https://pokeapi.co/media/img/" + i + ".png";
         var pokeID = "pokemonNumber" + i
-        var pokeURL = 'http://pokeapi.co/api/v1/pokemon/'+ i
+        var pokeURL = 'https://pokeapi.co/api/v1/pokemon/'+ i
           $('#pokemon').append('<img src=' + pokemon + ' id=' + pokeID + ' url=' + pokeURL + '>')
         }
           //access the info for each individual pokemon when it is clicked
