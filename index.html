@@ -14,8 +14,24 @@
         var pokeURL = 'https://pokeapi.co/api/v1/pokemon/'+ i
           $('#pokemon').append('<img src=' + pokemon + ' id=' + pokeID + ' url=' + pokeURL + '>')
         }
+        $('#pokedex').html("<h1>Welcome to the Pokedex!</h1><p>Please hover over a Pokemon to find out a little more about them!</p><img src ='http://pokeapi.co/media/img/25.png' >");
+        $('#pokedex p').css('margin', '100px 10px');
+        $('#pokedex h1').css('margin', '100px 10px');
+        $('#pokedex img').css('margin', '50px 10px');
+        $('#pokedex img').css('width', '200px');
+        $('#pokedex img').css('height', '200px');
+        //whenever the mouse is not hovering over a pokemon, the welcome message will show
+        $(document).mouseover(function(){
+          $('#pokedex').html("<h1>Welcome to the Pokedex!</h1><p>Please hover over a Pokemon to find out a little more about them!</p><img src ='http://pokeapi.co/media/img/25.png' >");
+          $('#pokedex p').css('margin', '100px 10px');
+          $('#pokedex h1').css('margin', '100px 10px');
+          $('#pokedex img').css('margin', '50px 10px');
+          $('#pokedex img').css('width', '200px');
+          $('#pokedex img').css('height', '200px');
+        })
           //access the info for each individual pokemon when it is clicked
-          $('img').click(function () {
+          $('img').hover(function (e) {
+            e.stopPropagation();
             console.log($(this).attr('url'));
             var pokePicture = $(this).attr('src');
             $.get($(this).attr('url'), function (res) {
