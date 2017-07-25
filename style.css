@@ -6,17 +6,17 @@ div{
   display: inline-block;
 }
 #pokemon{
-  height: 600px;
-  width: 800px;
+  height: auto;
+  width: 70%;
 }
 #pokedex{
   position: fixed;
   display: inline-block;
-  height: 600px;
-  width: 200px;
+  height: 550px;
+  width: 250px;
   vertical-align: top;
-  border-top: 10px solid red;
-  border-left: 10px solid red;
-  border-right: 10px solid red;
-  border-bottom: 20px solid red;
+  border: 10px solid red;
+}
+.pokeSpace{
+  margin-left: 40px;
 }

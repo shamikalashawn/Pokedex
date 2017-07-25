@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Pokedex</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript">
@@ -10,22 +14,22 @@
       for (var i = 1; i < 152; i++) {
         //put the images of the pokemon on the page
         var pokemon = "http://pokeapi.co/media/img/" + i + ".png";
-        var pokeID = "pokemonNumber" + i
-        var pokeURL = 'https://pokeapi.co/api/v1/pokemon/'+ i
-          $('#pokemon').append('<img src=' + pokemon + ' id=' + pokeID + ' url=' + pokeURL + '>')
+        var pokeID = "pokemonNumber" + i;
+        var pokeURL = 'https://pokeapi.co/api/v1/pokemon/'+ i;
+          $('#pokemon').append('<div class="col-xs-5 col-sm-3 col-md-2 col-lg-1"><img class="pokeSpace" src=' + pokemon + ' id=' + pokeID + ' url=' + pokeURL + '></div>')
         }
-        $('#pokedex').html("<h1>Welcome to the Pokedex!</h1><p>Please hover over a Pokemon to find out a little more about them!</p><img src ='http://pokeapi.co/media/img/25.png' >");
-        $('#pokedex p').css('margin', '100px 10px');
-        $('#pokedex h1').css('margin', '100px 10px');
-        $('#pokedex img').css('margin', '50px 10px');
+        $('#pokedex').html("<h1>Welcome to the Pokedex!</h1><h3>Please hover over a Pokemon to find out a little more about them!</h3><img src ='http://pokeapi.co/media/img/25.png' >");
+        $('#pokedex h3').css('margin', '100px 10px 0px 10px');
+        $('#pokedex h1').css('margin', '50px 10px');
+        $('#pokedex img').css('margin', '0px 10px');
         $('#pokedex img').css('width', '200px');
         $('#pokedex img').css('height', '200px');
         //whenever the mouse is not hovering over a pokemon, the welcome message will show
         $(document).mouseover(function(){
-          $('#pokedex').html("<h1>Welcome to the Pokedex!</h1><p>Please hover over a Pokemon to find out a little more about them!</p><img src ='http://pokeapi.co/media/img/25.png' >");
-          $('#pokedex p').css('margin', '100px 10px');
-          $('#pokedex h1').css('margin', '100px 10px');
-          $('#pokedex img').css('margin', '50px 10px');
+          $('#pokedex').html("<h1>Welcome to the Pokedex!</h1><h3>Please hover over a Pokemon to find out a little more about them!</h3><img src ='http://pokeapi.co/media/img/25.png' >");
+          $('#pokedex h3').css('margin', '100px 10px 0px 10px');
+          $('#pokedex h1').css('margin', '50px 10px');
+          $('#pokedex img').css('margin', '0px 10px');
           $('#pokedex img').css('width', '200px');
           $('#pokedex img').css('height', '200px');
         })
@@ -59,10 +63,13 @@
     </script>
   </head>
   <body>
-    <div id="pokemon">
-
-    </div>
-    <div id="pokedex">
-    </div>
+    <main class="container">
+        <div class="row">
+          <div id="pokedex" class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+          </div>
+          <div id="pokemon" class="col-xs-offset-4 col-sm-offset-3 col-md-offset-2 col-lg-offset-2 col-xs-10 col-sm-10 col-md-10 col-lg-10">
+          </div>
+        </div>
+    </main>
   </body>
 </html>
