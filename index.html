@@ -15,7 +15,7 @@
         //put the images of the pokemon on the page
         var pokemon = "http://pokeapi.co/media/img/" + i + ".png";
         var pokeID = "pokemonNumber" + i;
-        var pokeURL = 'https://pokeapi.co/api/v1/pokemon/'+ i;
+        var pokeURL = 'https://pokeapi.co/api/v2/pokemon/'+ i;
           $('#pokemon').append('<div class="col-xs-5 col-sm-3 col-md-2 col-lg-1"><img class="pokeSpace" src=' + pokemon + ' id=' + pokeID + ' url=' + pokeURL + '></div>')
         }
         $('#pokedex').html("<h1>Welcome to the Pokedex!</h1><h3>Please hover over a Pokemon to find out a little more about them!</h3><img src ='http://pokeapi.co/media/img/25.png' >");
