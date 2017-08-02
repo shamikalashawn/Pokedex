@@ -17,7 +17,7 @@
         var pokemon = "http://pokeapi.co/media/img/" + i + ".png";
         var pokeID = "pokemonNumber" + i;
         var pokeURL = 'https://pokeapi.co/api/v2/pokemon/'+ i;
-          $('#pokemon').append('<div class="col-xs-5 col-sm-3 col-md-2 col-lg-1"><img class="pokeSpace" src=' + pokemon + ' id=' + pokeID + ' url=' + pokeURL + '></div>')
+          $('#pokemon').append('<div class="col-xs-5 col-sm-3 col-md-2 col-lg-2"><img class="pokeSpace" src=' + pokemon + ' id=' + pokeID + ' url=' + pokeURL + '></div>')
         }
         $('#pokedex').html("<h1>Welcome to the Pokedex!</h1><h3>Please click on a Pokemon to find out a little more about them!</h3><img src ='http://pokeapi.co/media/img/25.png' >");
         $('#pokedex h3').css('margin', '100px 10px 0px 10px');
