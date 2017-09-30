@@ -14,7 +14,7 @@
     $(document).ready(function () {
       for (var i = 1; i < 152; i++) {
         //put the images of the pokemon on the page
-        var pokemon = "http://pokeapi.co/media/img/" + i + ".png";
+        var pokemon = "https://pokeapi.co/media/img/" + i + ".png";
         var pokeID = "pokemonNumber" + i;
         var pokeURL = 'https://pokeapi.co/api/v2/pokemon/'+ i;
           $('#pokemon').append('<div class="col-xs-5 col-sm-3 col-md-2 col-lg-2"><img class="pokeSpace" src=' + pokemon + ' id=' + pokeID + ' url=' + pokeURL + '></div>')
