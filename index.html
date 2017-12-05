@@ -46,10 +46,8 @@
               var pokeWeight = res.weight;
               var pokeTypes = ""
               for (var i = 0; i < res.types.length; i++) {
-                console.log("types: ", res.types[i].type);
                 pokeTypes += "<li>" + res.types[i].type.name + "</li>"
               }
-              console.log(pokeTypes);
               $('#pokedex').html("<h1>" + pokeName + "</h1><img src=" + pokePicture + "><h3>Types:</h3><ul>" + pokeTypes + "</ul><h3>Height</h3><p>" + pokeHeight +"</p><h3>Weight</h3><p>" + pokeWeight + "</p>")
 
               //styling for the elements inside the pokedex
